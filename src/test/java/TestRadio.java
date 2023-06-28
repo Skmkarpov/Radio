@@ -112,5 +112,22 @@ public class TestRadio {
         int expected = 10;
         assertEquals(expected, actual);
     }
-
+    @Test
+    void testSetCurrentSoundLessThanMin() {
+        Radio myRadio = new Radio();
+        myRadio.setSoundLevel(5);
+        myRadio.setSoundLevel(-1);
+        int actual = myRadio.getCurrentLoud();
+        int expected = 5;
+        assertEquals(expected, actual);
+    }
+    @Test
+    void testSetCurrentSoundMoreThanMax() {
+        Radio myRadio = new Radio();
+        myRadio.setSoundLevel(8);
+        myRadio.setSoundLevel(11);
+        int actual = myRadio.getCurrentLoud();
+        int expected = 8;
+        assertEquals(expected, actual);
+    }
 }
