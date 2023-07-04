@@ -2,7 +2,7 @@ public class Radio {
 
     private final int minChannelNumber = 0;
     private final int maxChannelNumber = 9;
-    private final int maxSoundLevel = 9;
+    private final int maxSoundLevel = 10;
     private final int minSoundLevel = 0;
 
     private int currentChannel = 0;
